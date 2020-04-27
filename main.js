@@ -21,10 +21,10 @@ div.addEventListener('mousedown', (e) => {
 
 div.addEventListener('mousemove', (e) => {
     if(drawActive){
-        divX = e.clientX;
-        divY = e.clientY;
-        div.style.left = `${divX - 50}px`;
-        div.style.top = `${divY - 50}px`;
+        divX = e.clientX - insertDivX;
+        divY = e.clientY- insertDivY;
+        div.style.left = `${divX}px`;
+        div.style.top = `${divY}px`;
     }
 })
 
